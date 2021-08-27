@@ -1,10 +1,3 @@
-export const getJournalEntries = () => {
-    const sortedByDate = journal.sort(
-        (currentEntry, nextEntry) =>
-            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-    )
-    return sortedByDate
-}
 
 const journal = [
     {
@@ -18,15 +11,23 @@ const journal = [
         id: 2,
         date: "08/19/2021",
         concept: "Group Project",
-        entry: "We presented our 1st group project",
+        entry: "We presented our 1st group project.",
         mood: "Great!"
     },
     {
         id: 3,
         date: "08/30/2021",
         concept: "Javascript",
-        entry: "We discussed arrays and functions",
+        entry: "We discussed arrays and functions.",
         mood: "Ok"
     }
 ]
+
+export const getJournalEntries = () => {
+    const sortedByDate = journal.sort(
+        (currentEntry, nextEntry) =>
+            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+    )
+    return sortedByDate
+}
 
