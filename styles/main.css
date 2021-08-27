@@ -1,0 +1,9 @@
+.entries {
+display: flex;
+flex-direction: column;
+}
+
+.journalEntry{
+    display: flex;
+    flex-wrap: wrap;
+}
