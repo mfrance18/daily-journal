@@ -1,3 +1,11 @@
-export const JournalEntryComponent = (journalObj) => {
-    return `${journalObj.entry}`
+export const JournalEntryComponent = (entry) => {
+    return `
+      <section  class="entry">
+          <article id="entry--${entry.id}">
+            <p class="date__concept">${entry.date}</p>
+            <p>Concepts: ${entry.concept}</p>
+            <p>Notes: ${entry.entry}</p>
+            <p>Mood: ${entry.mood}</p>
+        </article>
+      </section> `;
 }
