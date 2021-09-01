@@ -12,7 +12,7 @@ const journal = [
         date: "08/19/2021",
         concept: "Group Project",
         entry: "We presented our 1st group project.",
-        mood: "Great!"
+        mood: "Happy"
     },
     {
         id: 3,
@@ -30,4 +30,3 @@ export const getJournalEntries = () => {
     )
     return sortedByDate
 }
-

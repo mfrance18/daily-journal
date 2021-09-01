@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Matt",
+      "email": "trumpetman072392@aol.com",
+      "dateJoined": 1630513816281
+    },
+    {
+      "id": 2,
+      "name": "Jeff",
+      "email": "jeff@gmail.com",
+      "dateJoined": 1630513816281
+    },
+    {
+      "id": 3,
+      "name": "Jeff",
+      "email": "jeff@gmail.com",
+      "dateJoined": 1630513816281
+    },
+    {
+      "id": 4,
+      "name": "Brad",
+      "email": "brad@gmail.com",
+      "dateJoined": 1630513816281
+    }
+  ],
+
+  
+  "entries": [
+    {
+      "id": 1,
+      "date": 1630513816281,
+      "concepts": "HTML & CSS",
+      "journalEntry": "",
+      "timeStamp": "",
+      "userId": 1,
+      "moodId": 2
+    }
+  ]
+}

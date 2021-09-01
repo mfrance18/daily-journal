@@ -6,7 +6,13 @@ flex-direction: column;
 form {
     width: 30%;
 }
-.journalEntry{
+.Entries{
     display: flex;
     flex-wrap: wrap;
+}
+
+.entry {
+    border: solid black 3px;
+    width: 200px;
+    margin-left: 20px;
 }
