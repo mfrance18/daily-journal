@@ -3,7 +3,7 @@ import { JournalEntryComponent } from "./JournalEntry.js";
 
 
 export const EntryListComponent = () => {
-    const contentElement = document.querySelector(".Entries")
+    const contentElement = document.querySelector(".entryData")
     const entries = getJournalEntries()
     
     let journalHTMLRepresentation = ""

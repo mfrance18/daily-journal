@@ -5,27 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
+    <header>
+        <h1>Daily Journal</h1>
+    </header>
     <main>
         <section class="entries">
-            <h2>Daily Journal</h2>
             <form>
-                <fieldset>
+                <fieldset class="fieldSet">
                     <label for="journalDate"> Date of entry</label>
                     <input type="date" name="journalDate" id="journalDate">
                 </fieldset>
-                <fieldset>
+                <fieldset class="fieldSet">
                     <label for="">Concepts covered</label>
                     <input id="concepts" type="text">
-                </fieldset>
-                <fieldset>
-                    <label>Journal Entry</label>
+                </fieldset class="fieldSet">
+                <fieldset class="fieldSet">
+                    <label >Journal Entry</label>
                     <textarea id="journalEntries"></textarea>
                 </fieldset>
-                <fieldset>
+                <fieldset class="fieldSet">
                     <label>Mood for the Day</label>
                     <select id="mood">
                         <option>Sad</option>
@@ -37,7 +42,7 @@
             </form>
         </section>
 
-        <section class="Entries">
+        <section class="entryData">
 
         </section>
 
