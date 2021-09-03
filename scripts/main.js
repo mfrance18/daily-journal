@@ -1,9 +1,27 @@
 import { EntryListComponent } from "./JournalEntryList.js";
-import { getEntries} from "./DataManager.js"
+import {getEntries} from "./DataManager.js"
 
-EntryListComponent()
+const button = document.querySelector("main")
 
-getEntries()
-.then(data => {
-    console.log("User Data", data)
+button.addEventListener("click", event => {
+    if (event.target.id === "recordButton") {
+        console.log("Record Entry")
+    }
 })
+
+
+
+const showEntry = () => {
+    const contentTarget = document.querySelector(".entryData")
+    getEntries()
+    .then((allEntries) => {
+        contentTarget.innerHTML += EntryListComponent(allEntries)
+    })
+}
+
+
+const startJournal = () => {
+showEntry()
+}
+
+startJournal();
