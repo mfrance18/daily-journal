@@ -6,5 +6,6 @@ export const EntryListComponent = (allEntries) => {
     for (const post of allEntries ) {
     content += JournalEntryComponent(post)
     }
+    
     return content
 }
