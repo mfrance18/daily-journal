@@ -16,29 +16,15 @@
         <h1>Daily Journal</h1>
     </header>
     <main>
+        <section>
+            <h2>Sort by Mood</h2>
+            <select id="moodSelection">
+                <option value="1">Sad</option>
+                <option value="2">Ok</option>
+                <option value="3">Happy</option>
+            </select>
+        </section>
         <section class="entries">
-            <form>
-                <fieldset class="fieldSet">
-                    <label for="journalDate"> Date of entry</label>
-                    <input type="date" name="journalDate" id="journalDate">
-                </fieldset>
-                <fieldset class="fieldSet">
-                    <label for="">Concepts covered</label>
-                    <input id="concepts" type="text">
-                </fieldset class="fieldSet">
-                <fieldset class="fieldSet">
-                    <label >Journal Entry</label>
-                    <textarea id="journalEntries"></textarea>
-                </fieldset>
-                <fieldset class="fieldSet">
-                    <label>Mood for the Day</label>
-                    <select id="mood">
-                        <option>Sad</option>
-                        <option>Ok</option>
-                        <option>Happy</option>
-                    </select>
-                </fieldset>
-            </form>
         </section>
 
         <section class="entryData">
