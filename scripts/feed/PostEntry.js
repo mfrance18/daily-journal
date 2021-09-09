@@ -1,9 +1,10 @@
+import { dateFormat } from "../helperFunctions/helper.js"
+
 export const PostEntry = () => {
     return `
-    <form>
+    <form id="entryForm">
     <fieldset class="fieldSet">
-        <label for="journalDate"> Date of entry</label>
-        <input type="date" name="journalDate" id="journalDate">
+        <label for="journalDate"> Date of entry: ${dateFormat()}</label>
     </fieldset>
     <fieldset class="fieldSet">
         <label for="">Concepts covered</label>
@@ -16,12 +17,29 @@ export const PostEntry = () => {
     <fieldset class="fieldSet">
         <label>Mood for the Day</label>
         <select id="mood">
+            <option value="" disabled selected hidden>Select Mood</option>
             <option>Sad</option>
             <option>Ok</option>
             <option>Happy</option>
         </select>
     </fieldset>
 </form>
-<button class="saveButton" id="newPost__submit">Save</button>
+<div><button class="saveButton" id="newPost__submit">Save</button></div>
     `
+}
+
+export const SortEntry = () => {
+    return `
+    <section class="sortMood">
+    <h2>Sort by Mood</h2>
+        <select id="moodSelection">
+            <option value="" disabled selected hidden>Select Mood</option>
+            <option>Sad</option>
+            <option>Ok</option>
+            <option>Happy</option>
+        </select>
+        <button class="showAllButton"id="showAll">Show All</button>
+        </section>
+        
+        `
 }

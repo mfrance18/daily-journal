@@ -6,7 +6,8 @@ export const JournalEntryComponent = (entry) => {
             <p>Concepts: ${entry.concept}</p>
             <p>Notes: ${entry.entry}</p>
             <p>Mood: ${entry.mood}</p>
-            <div><button id="edit--${entry.id}">Edit</button></div>
+            <button class="editButton" id="edit--${entry.id}">Edit</button>
+            <button class="deleteButton" id="delete__${entry.id}">Delete</button>
         </article>
       </section> `;
 }

@@ -27,25 +27,11 @@
   ],
   "entries": [
     {
-      "id": 1,
-      "date": "08/12/2021",
-      "concept": "HTML & CSS",
-      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Ok"
-    },
-    {
-      "id": 2,
-      "date": "08/19/2021",
-      "concept": "Group Project",
-      "entry": "We presented our 1st group project.",
-      "mood": "Happy"
-    },
-    {
-      "id": 3,
-      "date": "08/30/2021",
-      "concept": "Javascript",
-      "entry": "We discussed arrays and functions.",
-      "mood": "Ok"
+      "date": "9/9/2021",
+      "concept": "Quite a bit",
+      "entry": "Learned to filter through data. Also learned to post data onto dom from form. I can delete posts as well.",
+      "mood": "Happy",
+      "id": 1
     }
   ]
 }
