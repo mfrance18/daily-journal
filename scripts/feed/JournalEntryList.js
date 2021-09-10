@@ -1,4 +1,3 @@
-// import { getJournalEntries } from "./JournalData.js";
 import { JournalEntryComponent } from "./JournalEntry.js";
 
 export const EntryListComponent = (allEntries) => {

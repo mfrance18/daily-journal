@@ -1,7 +1,7 @@
 import { EntryListComponent } from "./feed/JournalEntryList.js";
 import { getEntries, useEntryCollection, createEntry, deletePost } from "./data/DataManager.js"
 import { PostEntry, SortEntry } from "./feed/PostEntry.js";
-import { resetForm } from "./helperFunctions/helper.js";
+// import { resetForm } from "./helperFunctions/helper.js";
 
 const journalElement = document.querySelector("main")
 
@@ -40,7 +40,6 @@ journalElement.addEventListener("click", event => {
             showEntry();
           })
     } else if (event.target.id === "showAll"){  //this button displays all posts
-        console.log("show all button was clicked")
         showEntry()
     }
 })
@@ -86,9 +85,12 @@ journalElement.addEventListener("click", event => {
         createEntry(postObject)
             .then(dataBase => {
                 showEntry()
+                
             })
-            .then(resetForm())
-    }
+            .then(document.querySelector("#concepts").value='')
+            .then(document.querySelector("#journalEntries").value='')
+            .then(document.querySelector("#mood").value='')
+    } 
 })
 
 //functions for displaying to HTML

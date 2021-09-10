@@ -25,13 +25,5 @@
       "dateJoined": 1630513816281
     }
   ],
-  "entries": [
-    {
-      "date": "9/9/2021",
-      "concept": "Quite a bit",
-      "entry": "Learned to filter through data. Also learned to post data onto dom from form. I can delete posts as well.",
-      "mood": "Happy",
-      "id": 1
-    }
-  ]
+  "entries": []
 }

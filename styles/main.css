@@ -6,7 +6,7 @@ html {
 }
 
 body {
-   margin: 0;
+    margin: 0;
 }
 
 header {
@@ -21,12 +21,11 @@ h1 {
 }
 
 .fieldSet {
-    background: radial-gradient(circle, rgba(174,238,238,0.7063200280112045) 0%, rgba(0,0,0,1) 100%);
-}
-
-label {
-    color: white;
-    font-size: 20px;
+    background: radial-gradient(circle, rgba(174, 238, 238, 0.7063200280112045) 0%, rgba(0, 0, 0, 1) 100%);
+    width: 30rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .entries {
@@ -36,13 +35,10 @@ label {
     padding-top: 30px;
 }
 
-form {
-    width: 40%;
-}
-.entryData{
+.entryData {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     padding-top: 30px;
 }
 
@@ -52,9 +48,29 @@ p {
 }
 
 .entry {
-    background: radial-gradient(circle, rgba(174,238,238,0.7063200280112045) 0%, rgba(0,0,0,1) 100%);
+    background: radial-gradient(circle, rgba(174, 238, 238, 0.7063200280112045) 0%, rgba(0, 0, 0, 1) 100%);
     width: 300px;
     margin-left: 20px;
+}
+
+.sortMood {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: radial-gradient(circle, rgba(174, 238, 238, 0.7063200280112045) 0%, rgba(0, 0, 0, 1) 100%);
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#moodSelection {
+    margin-left: 10px;
+}
+
+/* buttons */
+
+.entryButtons {
+    margin-top: 5px
 }
 
 .saveButton {
@@ -62,9 +78,10 @@ p {
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;
-    background: radial-gradient(circle, rgba(199,0,0,0.7203256302521008) 0%, rgba(87,247,108,1) 100%);
-    padding: 10px 60px 10px;
-    margin: 10px;
+    background: radial-gradient(circle, rgba(199, 0, 0, 0.7203256302521008) 0%, rgba(87, 247, 108, 1) 100%);
+    padding: 5px 20px 5px;
+    margin-top: 5px;
+    margin-right: 5px;
     border-radius: 50px;
     display: inline-block;
     border: none;
@@ -73,47 +90,49 @@ p {
 
 .saveButton:hover {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-	box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 }
 
 .deleteButton {
     color: #fff !important;
     font-size: 20px;
-	text-transform: uppercase;
-	text-decoration: none;
-	background: radial-gradient(circle, rgba(224,0,0,1) 0%, rgba(52,30,30,1) 100%);;
-	padding: 5px 10px 5px;
-	border-radius: 50px;
-	display: inline-block;
-	border: none;
-	transition: all 0.4s ease 0s;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: radial-gradient(circle, rgba(224, 0, 0, 1) 0%, rgba(52, 30, 30, 1) 100%);
+    ;
+    padding: 5px 10px 5px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
 }
 
-.deleteButton:hover{
+.deleteButton:hover {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-	box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 }
 
 .editButton {
     color: white !important;
     font-size: 20px;
-	text-transform: uppercase;
-	text-decoration: none;
-	background: radial-gradient(circle, rgba(0,198,199,0.8211659663865546) 0%, rgba(95,247,87,1) 100%);
-	padding: 5px 20px 5px;
-	border-radius: 50px;
-	display: inline-block;
-	border: none;
-	transition: all 0.4s ease 0s;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: radial-gradient(circle, rgba(0, 198, 199, 0.8211659663865546) 0%, rgba(95, 247, 87, 1) 100%);
+    padding: 5px 20px 5px;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
 }
 
 .editButton:hover {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-	box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 }
+
 .sortEntries {
     display: flex;
     justify-content: center;
@@ -125,33 +144,70 @@ p {
 
 .showAllButton {
     color: white !important;
-	text-transform: uppercase;
-	text-decoration: none;
-	background: radial-gradient(circle, rgba(0,200,224,1) 0%, rgba(225,77,237,1) 100%);
-	padding: 5px 20px 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: radial-gradient(circle, rgba(0, 200, 224, 1) 0%, rgba(225, 77, 237, 1) 100%);
+    padding: 5px 20px 5px;
     margin-left: 10px;
-	border-radius: 50px;
-	display: inline-block;
-	border: none;
-	transition: all 0.4s ease 0s;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
 }
 
-.showAllButton:hover{
+.showAllButton:hover {
     text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
-	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-	box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 }
 
-.sortMood {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background: radial-gradient(circle, rgba(174,238,238,0.7063200280112045) 0%, rgba(0,0,0,1) 100%);
-    padding-left: 25px;
-    padding-right: 25px;
+/* entry input fields */
+
+.newPost {
+    margin: 0 25%;
 }
 
-#moodSelection {
-    margin-left: 10px;
+.newPost__input {
+    width: 30rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.newPost__description {
+    width: 100%;
+    height: 5em;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* dropdown list */
+
+.box select {
+    background: radial-gradient(circle, rgba(174, 238, 238, 0.7063200280112045) 0%, rgba(0, 0, 0, 1) 100%);
+    background-color: grey;
+    color: white;
+    padding: 12px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+}
+
+.box::before {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+    padding: 30px;
 }
