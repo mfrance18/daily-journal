@@ -1,14 +1,15 @@
 // import { dateFormat } from "../helperFunctions/helper.js"
 
 export const PostEntry = () => {
-    return `    <div class="newPost">
-                    <div>
-                        <input value=""
-                            id="concepts"
-                            class="newPost__input"
-                            type="text"
-                            placeholder="Concepts" />
-                    </div>
+
+    return `  <div class="newPost">
+                        <div>
+                            <input value=""
+                                id="concepts"
+                                class="newPost__input"
+                                type="text"
+                                placeholder="Concepts" />
+                         </div>
                 
                     <textarea name="postDescription"
                         id="journalEntries"
@@ -27,21 +28,15 @@ export const PostEntry = () => {
                             <button class="saveButton" id="newPost__submit">Save</button>
                             <button class="saveButton">Cancel</button>
                         </div>
-                </div>`
-}
-
-export const SortEntry = () => {
-    return `
-    <section class="sortMood">
-    <h2>Sort by Mood</h2>
-        <select id="moodSelection">
-            <option value="" disabled selected hidden>Select Mood</option>
-            <option>Sad</option>
-            <option>Ok</option>
-            <option>Happy</option>
-        </select>
-        <button class="showAllButton"id="showAll">Show All</button>
-        </section>
-        
-        `
+                        <section class="sortMood">
+                        <h2>Sort by Mood</h2>
+                            <select id="moodSelection">
+                                <option value="" disabled selected hidden>Select Mood</option>
+                                <option>Sad</option>
+                                <option>Ok</option>
+                                <option>Happy</option>
+                            </select>
+                            <button class="showAllButton"id="showAll">Show All</button>
+                        </section>
+                 </div>`
 }

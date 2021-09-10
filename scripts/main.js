@@ -1,7 +1,7 @@
 import { EntryListComponent } from "./feed/JournalEntryList.js";
 import { getEntries, useEntryCollection, createEntry, deletePost } from "./data/DataManager.js"
-import { PostEntry, SortEntry } from "./feed/PostEntry.js";
-// import { resetForm } from "./helperFunctions/helper.js";
+import { PostEntry } from "./feed/PostEntry.js";
+
 
 const journalElement = document.querySelector("main")
 
@@ -21,10 +21,10 @@ const showPostEntry = () => {
     entryElement.innerHTML = PostEntry();
 }
 
-const showSortedEntries = () => {
-    const sortElement = document.querySelector(".sortEntries")
-    sortElement.innerHTML = SortEntry();
-}
+// const showSortedEntries = () => {
+//     const sortElement = document.querySelector(".sortEntries")
+//     sortElement.innerHTML = SortEntry();
+// }
 
 
 
@@ -98,7 +98,7 @@ journalElement.addEventListener("click", event => {
 const startJournal = () => {
     showEntry()
     showPostEntry()
-    showSortedEntries()
+    // showSortedEntries()
 }
 
 startJournal();
