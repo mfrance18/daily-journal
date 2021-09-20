@@ -13,6 +13,11 @@ export const getEntries = () => {
     })
 }
 
+export const getSingleEntry = (entryId) => {
+	return fetch(`http://localhost:8088/entries/${entryId}`)
+	  .then(response => response.json())
+  }
+
 export const createEntry = postObj => {
     return fetch("http://localhost:8088/entries", {
         method: "POST",
@@ -24,8 +29,8 @@ export const createEntry = postObj => {
     .then(response => response.json())
 }
 
-export const deletePost = postId => {
-    return fetch(`http://localhost:8088/entries/${postId}`, {
+export const deletePost = entryId => {
+    return fetch(`http://localhost:8088/entries/${entryId}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
@@ -33,5 +38,17 @@ export const deletePost = postId => {
   
     })
         .then(response => response.json())
-        .then(getEntries)
+  }
+
+  export const updatePost = postObj => {
+	return fetch(`http://localhost:8088/entries/${postObj.id}`, {
+		method: "PUT",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(postObj)
+  
+	})
+		.then(response => response.json())
+		
   }

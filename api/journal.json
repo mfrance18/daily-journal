@@ -25,5 +25,13 @@
       "dateJoined": 1630513816281
     }
   ],
-  "entries": []
+  "entries": [
+    {
+      "date": "9/20/2021",
+      "concept": "asdf",
+      "entry": "asdfasdf",
+      "mood": "Ok",
+      "id": 1
+    }
+  ]
 }

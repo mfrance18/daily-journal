@@ -1,6 +1,7 @@
 import { EntryListComponent } from "./feed/JournalEntryList.js";
-import { getEntries, useEntryCollection, createEntry, deletePost } from "./data/DataManager.js"
+import { getEntries, useEntryCollection, createEntry, deletePost, getSingleEntry, updatePost } from "./data/DataManager.js"
 import { PostEntry } from "./feed/PostEntry.js";
+import { PostEdit } from "./feed/PostEdit.js";
 
 
 const journalElement = document.querySelector("main")
@@ -16,25 +17,26 @@ const showEntry = () => {
 }
 
 const showPostEntry = () => {
-    //Get a reference to the location on the DOM where the nav will display
     const entryElement = document.querySelector(".entries");
     entryElement.innerHTML = PostEntry();
 }
 
-// const showSortedEntries = () => {
-//     const sortElement = document.querySelector(".sortEntries")
-//     sortElement.innerHTML = SortEntry();
-// }
+const showEdit = (postObj) => {
+    const entryElement = document.querySelector(".entries");
+    entryElement.innerHTML = PostEdit(postObj);
+}
 
 
-
+//click event listeners
 journalElement.addEventListener("click", event => {
    if (event.target.id.startsWith("edit")) {  //this controls the edit button
-        alert("Edit button clicked", event.target.id.split("--"))
-        console.log("the id is", event.target.id.split("--")[1])
-
+    const postId = event.target.id.split("--")[1];
+    getSingleEntry(postId)
+        .then(response => {
+            showEdit(response);
+        })
     } else if (event.target.id.startsWith("delete")) { //this controls the delete button
-        const postId = event.target.id.split("__")[1];
+        const postId = event.target.id.split("--")[1];
         deletePost(postId)
           .then(response => {
             showEntry();
@@ -85,12 +87,43 @@ journalElement.addEventListener("click", event => {
         createEntry(postObject)
             .then(dataBase => {
                 showEntry()
-                
+                showPostEntry()
             })
-            .then(document.querySelector("#concepts").value='')
-            .then(document.querySelector("#journalEntries").value='')
-            .then(document.querySelector("#mood").value='')
     } 
+})
+
+//UPDATE BUTTON CLICK EVENT LISTENER
+journalElement.addEventListener("click", event => {
+    event.preventDefault();
+    if (event.target.id.startsWith("updatePost")) {
+        const postId = event.target.id.split("--")[1];
+        //collect all the details into an object
+        const date = new Date().toLocaleDateString()
+        const concepts = document.querySelector("#concepts").value
+        const entry = document.querySelector("#journalEntries").value
+        const mood = document.querySelector("#mood").value
+
+        const postObject = {
+            date: date,
+            concept: concepts,
+            entry: entry,
+            mood: mood,
+            id: parseInt(postId)
+        }
+
+        updatePost(postObject)
+            .then(response => {
+                showEntry();
+                showPostEntry()
+            })
+    }
+})
+
+//CANCEL BUTTON TO CLEAR FORM EVENT LISTENER
+journalElement.addEventListener("click", event => {
+    if (event.target.id === "cancel") {
+        showPostEntry()
+    }
 })
 
 //functions for displaying to HTML
@@ -98,7 +131,6 @@ journalElement.addEventListener("click", event => {
 const startJournal = () => {
     showEntry()
     showPostEntry()
-    // showSortedEntries()
 }
 
 startJournal();

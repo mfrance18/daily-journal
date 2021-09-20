@@ -1,4 +1,5 @@
 // import { dateFormat } from "../helperFunctions/helper.js"
+const dateFormat = new Date().toLocaleDateString()
 
 export const PostEntry = () => {
 
@@ -26,7 +27,7 @@ export const PostEntry = () => {
                         </div>
                         <div class="entryButtons">
                             <button class="saveButton" id="newPost__submit">Save</button>
-                            <button class="saveButton">Cancel</button>
+                            <button id="cancel">Cancel</button>
                         </div>
                         <section class="sortMood">
                         <h2>Sort by Mood</h2>
