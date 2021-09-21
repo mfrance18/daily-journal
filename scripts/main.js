@@ -70,7 +70,7 @@ journalElement.addEventListener("click", event => {
     event.preventDefault();
     if (event.target.id === "newPost__submit") {
         //collect the input values into an object to post to the DB
-        const date = new Date().toLocaleDateString()
+        const date = document.querySelector("#date").value
         const concepts = document.querySelector("#concepts").value
         const entry = document.querySelector("#journalEntries").value
         const mood = document.querySelector("#mood").value
@@ -84,6 +84,7 @@ journalElement.addEventListener("click", event => {
         }
 
         // be sure to import from the DataManager
+        console.log("postObject")
         createEntry(postObject)
             .then(dataBase => {
                 showEntry()
@@ -98,7 +99,7 @@ journalElement.addEventListener("click", event => {
     if (event.target.id.startsWith("updatePost")) {
         const postId = event.target.id.split("--")[1];
         //collect all the details into an object
-        const date = new Date().toLocaleDateString()
+        const date = document.querySelector("#date").value
         const concepts = document.querySelector("#concepts").value
         const entry = document.querySelector("#journalEntries").value
         const mood = document.querySelector("#mood").value
@@ -110,7 +111,7 @@ journalElement.addEventListener("click", event => {
             mood: mood,
             id: parseInt(postId)
         }
-
+        console.log(date, "date")
         updatePost(postObject)
             .then(response => {
                 showEntry();

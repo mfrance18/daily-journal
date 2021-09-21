@@ -1,6 +1,7 @@
 export const PostEdit = (postObj) => {
     return `  <div class="newPost">
                 <h3>Edit This Entry</h3>
+                <input value="${postObj.date}" id="date" class="newPost" class="newPost__input" >
                     <div>
                         <input value="${postObj.concept}"
                             id="concepts"

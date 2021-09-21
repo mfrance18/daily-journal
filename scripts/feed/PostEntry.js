@@ -1,9 +1,9 @@
-// import { dateFormat } from "../helperFunctions/helper.js"
-const dateFormat = new Date().toLocaleDateString()
-
 export const PostEntry = () => {
 
-    return `  <div class="newPost">
+    return `  <div>
+
+                        <input id="date" class="newPost" class="newPost__input" placeholder="Today's Date">
+
                         <div>
                             <input value=""
                                 id="concepts"
